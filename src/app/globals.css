@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.board-row {
+  padding: 1px 1px 1px 1px;
+}
+
+.board {
+  position: absolute;
+  left: 20px;
+  top: 100px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+.selected {
+  background-color: #272723;
+  color: #eee;
+}
+
+.correct {
+  background-color: #070;
+  color: #eee;
+}
+
+.button {
+  font: bold 12px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+
+.button-container {
+  display: flex;
+}
+
+.arrow-keys{
+  position: absolute;
+  left: 580px;
+  top: 220px;
+}
+
+.up-button{
+position: absolute;
+height: 38px;
+width: 38px;
+left: 50px;
+top: 50px;
+}
+
+.down-button{
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  left: 50px;
+  top: 155px;
+
+}
+
+.left-button{
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  left: -10px;
+  top: 100px;
+}
+
+.right-button{
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  left: 110px;
+  top: 100px;
+}
+
+.score {
+  position: absolute;
+  left: 550px;
+  top: 10px;
+}
+
+.numMoves {
+  position: absolute;
+  left: 550px;
+  top: 50px;
+}
+
+.config{
+  position: absolute;
+  left: 20px;
+}
+
+.config-buttons{
+  display: flex;
+  background-color: rgb(158, 161, 158);
+  width: 180px;
+  height: 50px;
+
+  position: absolute;
+  top: 30px;
+  left: 20px;
+
+  padding: 3px 3px 3px 3px;
+}
+
+
+.config-1{
+  width: 100%;
+  background-color: #CCCCCC;
+  border-right: 1px solid #333333;
+}
+
+.config-2{
+  width: 100%;
+  background-color: #CCCCCC;
+  border-right: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+
+.config-3{
+  width: 100%;
+  background-color: #CCCCCC;
+  border-left: 1px solid #333333;
+
+}
+
+.checkSolution{
+  position: absolute;
+  left: 680px;
+  top: 570px;
+
+  background-color: #CCCCCC;
+  color: #171717;
+
+  padding: 2px;
+}
+
+.resetPuzzle{
+  position: absolute;
+  left: 550px;
+  top: 570px;
+
+  background-color: #CCCCCC;
+  color: #171717;
+
+  padding: 2px;
+}
