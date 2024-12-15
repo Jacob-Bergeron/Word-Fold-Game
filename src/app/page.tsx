@@ -174,34 +174,11 @@ export default function Home() {
     }
   }
 
-  document.addEventListener('keydown', (e) => {
-    if (checkSelected() && !e.repeat) {     //only listen if a square is selected
-      switch (e.code) {
-        case 'ArrowUp':
-          moveContents("up");
-          break;
-        case 'ArrowDown':
-          moveContents("down");
-          break;
-        case 'ArrowLeft':
-          moveContents("left");
-          break;
-        case 'ArrowRight':
-          moveContents("right");
-          break;
-      }
-    }
-   
-  })
-
-  document.addEventListener('keyup', (e)=> { 
-
-  })
 
 
   // function for an arrow click
   function arrowClick(direction: string) {
-      moveContents(direction)
+    moveContents(direction)
   }
 
 
@@ -337,6 +314,7 @@ export default function Home() {
           <button data-testid="4,4" className={css(4, 4)} onClick={() => handleClick(4, 4)}>{model.contents(4, 4)}</button>
         </div>
       </div>
+      
       <div>
         <div className="arrow-keys">
           <button data-testid="leftButton" className="button left-button" onClick={() => arrowClick("left")}>&#8592;</button>
